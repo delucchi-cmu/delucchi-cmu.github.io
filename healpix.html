@@ -1,0 +1,121 @@
+<html>
+	<head>
+		<title>Healpix Table</title>
+	</head>
+<body>
+
+I use the NASA <a href="https://lambda.gsfc.nasa.gov/toolbox/pixelcoords.html">Healpix pixel coordinates</a> descriptions of pixel characteristics a lot, but wish that:
+<ul>
+<li>it went to higher orders</li>
+<li>it told me how many bits are needed to store the Npix (even though it's easy to figure out)</li>
+<li>the area is expressed in degrees, since that's how all of MY astronomer friends refer to it</li>
+<li>the numbers were prettier-printed</li>
+</ul>
+
+So I made this:
+
+<table border="1">
+<thead>
+<tr><th style="text-align: right;">  Norder</th><th style="text-align: right;">     Nsides</th><th style="text-align: right;">                     Npix</th><th style="text-align: right;">  Bits needed</th><th style="text-align: right;">             Area</th><th style="text-align: right;">  Average width</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: right;">       0</td><td style="text-align: right;">          1</td><td style="text-align: right;">                       12</td><td style="text-align: right;">            4</td><td style="text-align: right;">   3437.75 deg sq</td><td style="text-align: right;">      58.63 deg</td></tr>
+<tr><td style="text-align: right;">       1</td><td style="text-align: right;">          2</td><td style="text-align: right;">                       48</td><td style="text-align: right;">            6</td><td style="text-align: right;">    859.44 deg sq</td><td style="text-align: right;">      29.32 deg</td></tr>
+<tr><td style="text-align: right;">       2</td><td style="text-align: right;">          4</td><td style="text-align: right;">                      192</td><td style="text-align: right;">            8</td><td style="text-align: right;">    214.86 deg sq</td><td style="text-align: right;">      14.66 deg</td></tr>
+<tr><td style="text-align: right;">       3</td><td style="text-align: right;">          8</td><td style="text-align: right;">                      768</td><td style="text-align: right;">           10</td><td style="text-align: right;">     53.71 deg sq</td><td style="text-align: right;">       7.33 deg</td></tr>
+<tr><td style="text-align: right;">       4</td><td style="text-align: right;">         16</td><td style="text-align: right;">                    3,072</td><td style="text-align: right;">           12</td><td style="text-align: right;">     13.43 deg sq</td><td style="text-align: right;">       3.66 deg</td></tr>
+<tr><td style="text-align: right;">       5</td><td style="text-align: right;">         32</td><td style="text-align: right;">                   12,288</td><td style="text-align: right;">           14</td><td style="text-align: right;">      3.36 deg sq</td><td style="text-align: right;">       1.83 deg</td></tr>
+<tr><td style="text-align: right;">       6</td><td style="text-align: right;">         64</td><td style="text-align: right;">                   49,152</td><td style="text-align: right;">           16</td><td style="text-align: right;">3021.46 arcmin sq</td><td style="text-align: right;">   54.97 arcmin</td></tr>
+<tr><td style="text-align: right;">       7</td><td style="text-align: right;">        128</td><td style="text-align: right;">                  196,608</td><td style="text-align: right;">           18</td><td style="text-align: right;"> 755.36 arcmin sq</td><td style="text-align: right;">   27.48 arcmin</td></tr>
+<tr><td style="text-align: right;">       8</td><td style="text-align: right;">        256</td><td style="text-align: right;">                  786,432</td><td style="text-align: right;">           20</td><td style="text-align: right;"> 188.84 arcmin sq</td><td style="text-align: right;">   13.74 arcmin</td></tr>
+<tr><td style="text-align: right;">       9</td><td style="text-align: right;">        512</td><td style="text-align: right;">                3,145,728</td><td style="text-align: right;">           22</td><td style="text-align: right;">  47.21 arcmin sq</td><td style="text-align: right;">    6.87 arcmin</td></tr>
+<tr><td style="text-align: right;">      10</td><td style="text-align: right;">      1,024</td><td style="text-align: right;">               12,582,912</td><td style="text-align: right;">           24</td><td style="text-align: right;">  11.80 arcmin sq</td><td style="text-align: right;">    3.44 arcmin</td></tr>
+<tr><td style="text-align: right;">      11</td><td style="text-align: right;">      2,048</td><td style="text-align: right;">               50,331,648</td><td style="text-align: right;">           26</td><td style="text-align: right;">   2.95 arcmin sq</td><td style="text-align: right;">    1.72 arcmin</td></tr>
+<tr><td style="text-align: right;">      12</td><td style="text-align: right;">      4,096</td><td style="text-align: right;">              201,326,592</td><td style="text-align: right;">           28</td><td style="text-align: right;">2655.58 arcsec sq</td><td style="text-align: right;">   51.53 arcsec</td></tr>
+<tr><td style="text-align: right;">      13</td><td style="text-align: right;">      8,192</td><td style="text-align: right;">              805,306,368</td><td style="text-align: right;">           30</td><td style="text-align: right;"> 663.89 arcsec sq</td><td style="text-align: right;">   25.77 arcsec</td></tr>
+<tr><td style="text-align: right;">      14</td><td style="text-align: right;">     16,384</td><td style="text-align: right;">            3,221,225,472</td><td style="text-align: right;">           32</td><td style="text-align: right;"> 165.97 arcsec sq</td><td style="text-align: right;">   12.88 arcsec</td></tr>
+<tr><td style="text-align: right;">      15</td><td style="text-align: right;">     32,768</td><td style="text-align: right;">           12,884,901,888</td><td style="text-align: right;">           34</td><td style="text-align: right;">  41.49 arcsec sq</td><td style="text-align: right;">    6.44 arcsec</td></tr>
+<tr><td style="text-align: right;">      16</td><td style="text-align: right;">     65,536</td><td style="text-align: right;">           51,539,607,552</td><td style="text-align: right;">           36</td><td style="text-align: right;">  10.37 arcsec sq</td><td style="text-align: right;">    3.22 arcsec</td></tr>
+<tr><td style="text-align: right;">      17</td><td style="text-align: right;">    131,072</td><td style="text-align: right;">          206,158,430,208</td><td style="text-align: right;">           38</td><td style="text-align: right;">   2.59 arcsec sq</td><td style="text-align: right;">    1.61 arcsec</td></tr>
+<tr><td style="text-align: right;">      18</td><td style="text-align: right;">    262,144</td><td style="text-align: right;">          824,633,720,832</td><td style="text-align: right;">           40</td><td style="text-align: right;">   0.65 arcsec sq</td><td style="text-align: right;">    0.81 arcsec</td></tr>
+<tr><td style="text-align: right;">      19</td><td style="text-align: right;">    524,288</td><td style="text-align: right;">        3,298,534,883,328</td><td style="text-align: right;">           42</td><td style="text-align: right;">   0.16 arcsec sq</td><td style="text-align: right;">    0.40 arcsec</td></tr>
+<tr><td style="text-align: right;">      20</td><td style="text-align: right;">  1,048,576</td><td style="text-align: right;">       13,194,139,533,312</td><td style="text-align: right;">           44</td><td style="text-align: right;">   0.04 arcsec sq</td><td style="text-align: right;">    0.20 arcsec</td></tr>
+<tr><td style="text-align: right;">      21</td><td style="text-align: right;">  2,097,152</td><td style="text-align: right;">       52,776,558,133,248</td><td style="text-align: right;">           46</td><td style="text-align: right;">   0.01 arcsec sq</td><td style="text-align: right;">    0.10 arcsec</td></tr>
+<tr><td style="text-align: right;">      22</td><td style="text-align: right;">  4,194,304</td><td style="text-align: right;">      211,106,232,532,992</td><td style="text-align: right;">           48</td><td style="text-align: right;">  2532.56 msec sq</td><td style="text-align: right;">    0.05 arcsec</td></tr>
+<tr><td style="text-align: right;">      23</td><td style="text-align: right;">  8,388,608</td><td style="text-align: right;">      844,424,930,131,968</td><td style="text-align: right;">           50</td><td style="text-align: right;">   633.14 msec sq</td><td style="text-align: right;">    0.03 arcsec</td></tr>
+<tr><td style="text-align: right;">      24</td><td style="text-align: right;"> 16,777,216</td><td style="text-align: right;">    3,377,699,720,527,872</td><td style="text-align: right;">           52</td><td style="text-align: right;">   158.28 msec sq</td><td style="text-align: right;">    0.01 arcsec</td></tr>
+<tr><td style="text-align: right;">      25</td><td style="text-align: right;"> 33,554,432</td><td style="text-align: right;">   13,510,798,882,111,488</td><td style="text-align: right;">           54</td><td style="text-align: right;">    39.57 msec sq</td><td style="text-align: right;">      6.29 msec</td></tr>
+<tr><td style="text-align: right;">      26</td><td style="text-align: right;"> 67,108,864</td><td style="text-align: right;">   54,043,195,528,445,952</td><td style="text-align: right;">           56</td><td style="text-align: right;">     9.89 msec sq</td><td style="text-align: right;">      3.15 msec</td></tr>
+<tr><td style="text-align: right;">      27</td><td style="text-align: right;">134,217,728</td><td style="text-align: right;">  216,172,782,113,783,808</td><td style="text-align: right;">           58</td><td style="text-align: right;">     2.47 msec sq</td><td style="text-align: right;">      1.57 msec</td></tr>
+<tr><td style="text-align: right;">      28</td><td style="text-align: right;">268,435,456</td><td style="text-align: right;">  864,691,128,455,135,232</td><td style="text-align: right;">           60</td><td style="text-align: right;">     0.62 msec sq</td><td style="text-align: right;">      0.79 msec</td></tr>
+<tr><td style="text-align: right;">      29</td><td style="text-align: right;">536,870,912</td><td style="text-align: right;">3,458,764,513,820,540,928</td><td style="text-align: right;">           62</td><td style="text-align: right;">     0.15 msec sq</td><td style="text-align: right;">      0.39 msec</td></tr>
+</tbody>
+</table>
+
+<br/><br/><br/>
+For Future Melissa, here's the code I used to create this kind of table:
+
+<pre><code>
+import numpy as np
+from tabulate import tabulate
+
+import astropy.units as u
+
+def order2npix(order: int) -> int:
+    return 12 * (1 << (2 * order))
+def order2resol(order: int, *, arcmin: bool = False, unit=u.rad) -> float:
+    if arcmin:
+        unit = u.arcmin
+    unit = u.Unit(unit)
+
+    return np.sqrt(order2pixarea(order, unit=unit * unit))
+
+def order2pixarea(order: int, *, degrees: bool = False, unit=u.sr) -> float:
+        if degrees:
+            unit = "deg**2"
+        unit = u.Unit(unit)
+
+        npix = order2npix(order)
+        pix_area_rad = 4 * np.pi / npix * u.steradian
+        return pix_area_rad.to_value(unit)
+
+def pretty_print_area(deg):
+    if deg >= 1:
+        return f"{deg:.2f} deg sq"
+    elif (deg * 3600) >= 1:
+        return f"{(deg * 3600):.2f} arcmin sq"
+    elif (deg * 12960000) >= .01:
+        return f"{(deg * 12960000):.2f} arcsec sq"
+    else:        
+        return f"{(deg * 12960000)} sec"
+
+def pretty_print_angle(deg):
+    if deg >= 1:
+        return f"{deg:.2f} deg"
+    elif (deg * 60) >= 1:
+        return f"{(deg * 60):.2f} arcmin"
+    elif (deg * 3600) >= .01:
+        return f"{(deg * 3600):.2f} arcsec"
+    else:        
+        return f"{(deg * 3600)} arcsec"
+    
+orders = np.arange(21)
+nsides = [int(2**i) for i in orders]
+npixen = [order2npix(i) for i in orders]
+bitses = [int(np.ceil(np.log2(npix))) for npix in npixen]
+areaug = [order2pixarea(i, degrees=True) for i in orders]
+areapp = [pretty_print_area(area) for area in areaug]
+avgwdh = [order2resol(i, unit=u.deg) for i in orders]
+wdthpp = [pretty_print_angle(i) for i in avgwdh]
+
+print(tabulate({"Norder": orders,
+                "Nsides": nsides,
+                "Npix": npixen,
+                "Bits needed": bitses,
+                "Area": areapp,
+                "Average width": wdthpp,
+               }, headers="keys",intfmt=",",tablefmt="html",
+               colalign=("right","right","right","right","right", "right")))
+</code></pre>
+</body>
+</html>
